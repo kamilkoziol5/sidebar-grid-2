@@ -25,7 +25,7 @@ body {
 .sidebar {
 	background-color: $backgroundColor;
 	border-right: 1px solid $strokeColor;
-	width: 85px;
+	width: 76px;
 	height: 100dvh;
 	padding: 20px 15px;
 	position: sticky;
@@ -34,7 +34,6 @@ body {
 	transition: 400ms ease;
 
 	.logo-container {
-		padding: 0 5px;
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -76,6 +75,10 @@ body {
 		.close {
 			display: none;
 		}
+
+		.hamburger {
+			display: none;
+		}
 	}
 
 	.menu-items-container {
@@ -84,17 +87,19 @@ body {
 
 		.title {
 			position: relative;
+			transition: all 0.3s ease;
 
 			h4 {
-				padding-left: 15px;
 				color: $whiteColor;
-				margin: 25px 0;
+				margin: 20px 0;
 				font-size: 24px;
 				font-weight: 700;
+				padding: 5px;
 				opacity: 0;
 				pointer-events: none;
 				transform: scale(0);
 				transition: 300ms ease;
+				width: max-content;
 			}
 
 			.line {
@@ -108,9 +113,9 @@ body {
 		}
 
 		.menu-items li a {
-			min-width: 55px;
-			padding: 15px;
-			margin-bottom: 10px;
+			min-width: 44px;
+			padding: 10px;
+			margin-bottom: 5px;
 			border-radius: 8px;
 			transition: 300ms ease;
 
@@ -167,6 +172,10 @@ body {
 			transform: translateY(0);
 
 			.title {
+				padding-left: 10px;
+				background-color: rgb(24, 24, 24);
+				border-radius: 8px;
+
 				h4 {
 					opacity: 1;
 					transform: scale(1);
@@ -192,7 +201,7 @@ body {
 }
 
 main {
-	padding: 10% 6%;
+	padding: 8% 6%;
 	display: flex;
 	flex-direction: column;
 	gap: 80px;
@@ -213,6 +222,72 @@ main {
 
 		p {
 			color: $textColor;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	body {
+		grid-template-columns: 1fr;
+	}
+	main {
+		padding: 5% 4%;
+		gap: 40px;
+	}
+
+	.sidebar {
+		width: 100vw;
+		height: 77px;
+		padding: 15px 4%;
+		border-right: none;
+		overflow: hidden;
+		border-bottom: 1px solid $strokeColor;
+		box-shadow: 0 10px 10px rgba(39, 39, 39, 0.4);
+
+		.logo-container {
+			position: static;
+			align-items: center;
+
+			.logo {
+				flex-grow: 1;
+			}
+
+			.toogler {
+				display: none;
+			}
+			.hamburger {
+				cursor: pointer;
+				display: block;
+				color: $whiteColor;
+				font-size: 25px;
+			}
+		}
+
+		.menu-items-container .title {
+			background-color: rgb(24, 24, 24);
+			border-radius: 8px;
+
+			h4 {
+				opacity: 1;
+				transform: scale(1);
+				padding: 5px;
+			}
+
+			.line {
+				display: none;
+			}
+		}
+
+		.menu-items-container .menu-items li a .menu-item-title {
+			opacity: 1;
+			transform: translateX(0);
+		}
+		.menu-items-container .menu-items li a .tooltip {
+			display: none;
+		}
+
+		&.collapsed {
+			height: 100dvh;
 		}
 	}
 }

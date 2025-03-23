@@ -23,7 +23,7 @@ body {
 .sidebar {
   background-color: #0f0f0f;
   border-right: 1px solid #636363;
-  width: 85px;
+  width: 76px;
   height: 100dvh;
   padding: 20px 15px;
   position: sticky;
@@ -32,7 +32,6 @@ body {
   transition: 400ms ease;
 }
 .sidebar .logo-container {
-  padding: 0 5px;
   position: relative;
   display: flex;
   align-items: center;
@@ -69,23 +68,29 @@ body {
 .sidebar .logo-container .close {
   display: none;
 }
+.sidebar .logo-container .hamburger {
+  display: none;
+}
 .sidebar .menu-items-container {
   transform: translateY(40px);
   transition: 300ms ease;
 }
 .sidebar .menu-items-container .title {
   position: relative;
+  transition: all 0.3s ease;
 }
 .sidebar .menu-items-container .title h4 {
-  padding-left: 15px;
   color: #ffffff;
-  margin: 25px 0;
+  margin: 20px 0;
   font-size: 24px;
   font-weight: 700;
+  padding: 5px;
   opacity: 0;
   pointer-events: none;
   transform: scale(0);
   transition: 300ms ease;
+  width: -moz-max-content;
+  width: max-content;
 }
 .sidebar .menu-items-container .title .line {
   position: absolute;
@@ -96,9 +101,9 @@ body {
   transition: 100ms ease;
 }
 .sidebar .menu-items-container .menu-items li a {
-  min-width: 55px;
-  padding: 15px;
-  margin-bottom: 10px;
+  min-width: 44px;
+  padding: 10px;
+  margin-bottom: 5px;
   border-radius: 8px;
   transition: 300ms ease;
 }
@@ -146,6 +151,11 @@ body {
 .sidebar.open .menu-items-container {
   transform: translateY(0);
 }
+.sidebar.open .menu-items-container .title {
+  padding-left: 10px;
+  background-color: rgb(24, 24, 24);
+  border-radius: 8px;
+}
 .sidebar.open .menu-items-container .title h4 {
   opacity: 1;
   transform: scale(1);
@@ -164,7 +174,7 @@ body {
 }
 
 main {
-  padding: 10% 6%;
+  padding: 8% 6%;
   display: flex;
   flex-direction: column;
   gap: 80px;
@@ -185,4 +195,61 @@ main section h2 {
 }
 main section p {
   color: #a5a5a5;
+}
+
+@media (max-width: 900px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+  main {
+    padding: 5% 4%;
+    gap: 40px;
+  }
+  .sidebar {
+    width: 100vw;
+    height: 77px;
+    padding: 15px 4%;
+    border-right: none;
+    overflow: hidden;
+    border-bottom: 1px solid #636363;
+    box-shadow: 0 10px 10px rgba(39, 39, 39, 0.4);
+  }
+  .sidebar .logo-container {
+    position: static;
+    align-items: center;
+  }
+  .sidebar .logo-container .logo {
+    flex-grow: 1;
+  }
+  .sidebar .logo-container .toogler {
+    display: none;
+  }
+  .sidebar .logo-container .hamburger {
+    cursor: pointer;
+    display: block;
+    color: #ffffff;
+    font-size: 25px;
+  }
+  .sidebar .menu-items-container .title {
+    background-color: rgb(24, 24, 24);
+    border-radius: 8px;
+  }
+  .sidebar .menu-items-container .title h4 {
+    opacity: 1;
+    transform: scale(1);
+    padding: 5px;
+  }
+  .sidebar .menu-items-container .title .line {
+    display: none;
+  }
+  .sidebar .menu-items-container .menu-items li a .menu-item-title {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .sidebar .menu-items-container .menu-items li a .tooltip {
+    display: none;
+  }
+  .sidebar.collapsed {
+    height: 100dvh;
+  }
 }/*# sourceMappingURL=style.css.map */
