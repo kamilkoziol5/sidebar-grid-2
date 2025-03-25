@@ -207,13 +207,14 @@ main .todo {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 1rem;
 }
 main .todo .container-wrapper {
   background-color: #0f0f0f;
   padding: 50px;
   border-radius: 22px;
   box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.6);
-  width: 900px;
+  width: 800px;
   max-width: 100%;
   max-height: 80vh;
   overflow: hidden;
@@ -368,6 +369,9 @@ main .todo .container-wrapper .to-do-app ul li span:hover {
     width: 100vw;
     height: 77px;
     padding: 15px 4%;
+    top: 0;
+    border-radius: 0;
+    margin: 0;
     border-right: none;
     overflow: hidden;
     border-bottom: 1px solid #636363;
@@ -410,5 +414,37 @@ main .todo .container-wrapper .to-do-app ul li span:hover {
   }
   .sidebar.collapsed {
     height: 100dvh;
+  }
+  main .todo .container-wrapper {
+    padding: 30px;
+    width: 500px;
+  }
+  main .todo .container-wrapper .to-do-app h2 {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 30px;
+  }
+  main .todo .container-wrapper .to-do-app h2 img {
+    margin-left: 0;
+    width: 45px;
+  }
+  main .todo .container-wrapper .to-do-app .search-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  main .todo .container-wrapper .to-do-app .search-container input {
+    padding: 15px;
+    font-size: 15px;
+  }
+  main .todo .container-wrapper .to-do-app .search-container button {
+    position: static;
+    transform: translateY(0);
+    padding: 15px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 520px) {
+  main .todo .container-wrapper {
+    width: 300px;
   }
 }/*# sourceMappingURL=style.css.map */
