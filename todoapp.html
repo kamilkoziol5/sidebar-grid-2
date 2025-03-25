@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Sidebar</title>
+</head>
+
+<body>
+
+    <nav class="sidebar">
+        <div class="logo-container">
+            <a href="index.html" class="logo"><img src="images/code (1).png" alt=""></a>
+
+            <button class="toogler" id="toogler-btn" title="Open Sidebar">
+                <i class='bx bxs-chevrons-right'></i>
+
+            </button>
+            <div class="hamburger">
+                <i class='bx bx-menu' id="menuIcon"></i>
+            </div>
+        </div>
+
+        <div class="menu-items-container">
+            <div class="title">
+                <h4>Menu</h4>
+                <span class="line"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="index.html" class="flex">
+                        <i class='bx bx-home'></i>
+                        <span class="menu-item-title">Home</span>
+                        <span class="tooltip">Home</span>
+                    </a></li>
+                <li><a href="" class="flex">
+                        <i class='bx bx-user'></i>
+                        <span class="menu-item-title">About</span>
+                        <span class="tooltip">About</span>
+                    </a></li>
+                <li><a href="" class="flex">
+                        <i class='bx bx-wrench'></i>
+                        <span class="menu-item-title">To Do App</span>
+                        <span class="tooltip">To Do App</span>
+                    </a></li>
+                <li><a href="" class="flex">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="menu-item-title">Projects</span>
+                        <span class="tooltip">Projects</span>
+                    </a></li>
+            </ul>
+        </div>
+        <div class="menu-items-container">
+            <div class="title">
+                <h4>Contact</h4>
+                <span class="line"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="" class="flex">
+                        <i class='bx bxl-dribbble'></i>
+                        <span class="menu-item-title">Dribbble</span>
+                        <span class="tooltip">Dribbble</span>
+                    </a></li>
+                <li><a href="" class="flex">
+                        <i class='bx bxl-github'></i>
+                        <span class="menu-item-title">Github</span>
+                        <span class="tooltip">Github</span>
+                    </a></li>
+                <li><a href="" class="flex">
+                        <i class='bx bxl-behance'></i>
+                        <span class="menu-item-title">Behance</span>
+                        <span class="tooltip">Behance</span>
+                    </a></li>
+                <li><a href="" class="flex">
+                        <i class='bx bxl-gmail'></i>
+                        <span class="menu-item-title">Gmail</span>
+                        <span class="tooltip">Gmail</span>
+                    </a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <main class="solo-app">
+        <section class="todo">
+            <div class="container-wrapper">
+                <div class="to-do-app">
+                    <h2>To-Do-List <img src="images/list.png" alt=""></h2>
+                    <div class="search-container">
+                        <input id="input-task-field" type="text" placeholder="Add Your Task" autocomplete="off">
+                        <button id="add-task-btn">Add</button>
+                    </div>
+                    <ul id="task-container">
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
