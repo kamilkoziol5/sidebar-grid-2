@@ -1,0 +1,160 @@
+@import "variables";
+@media (max-width: 900px) {
+	body {
+		grid-template-columns: 1fr;
+	}
+	main {
+		padding: 8% 4%;
+		gap: 40px;
+
+		.main-content:first-child {
+			margin-top: 100px;
+		}
+	}
+
+	.sidebar {
+		width: 100vw;
+		height: 77px;
+		padding: 15px 4%;
+		top: 0;
+		border-radius: 0;
+		margin: 0;
+		overflow: hidden;
+		border-bottom: 1px solid $strokeColor;
+		box-shadow: 0 10px 10px rgba(39, 39, 39, 0.4);
+		position: fixed;
+		z-index: 9999;
+
+		.logo-container {
+			position: static;
+			align-items: center;
+
+			.logo {
+				flex-grow: 1;
+			}
+
+			.toogler {
+				display: none;
+			}
+			.hamburger {
+				cursor: pointer;
+				display: block;
+				color: $whiteColor;
+				font-size: 25px;
+			}
+		}
+
+		.menu-items-container .title {
+			background-color: rgb(24, 24, 24);
+			border-radius: 8px;
+
+			h4 {
+				opacity: 1;
+				transform: scale(1);
+				padding: 5px;
+			}
+
+			.line {
+				display: none;
+			}
+		}
+
+		.menu-items-container .menu-items li a .menu-item-title {
+			opacity: 1;
+			transform: translateX(0);
+		}
+		.menu-items-container .menu-items li a .tooltip {
+			display: none;
+		}
+
+		&.collapsed {
+			height: 100dvh;
+		}
+	}
+
+	main .todo .container-wrapper {
+		padding: 30px;
+		width: 500px;
+		.to-do-app {
+			h2 {
+				flex-direction: column;
+				gap: 10px;
+				font-size: 30px;
+
+				img {
+					margin-left: 0;
+					width: 45px;
+				}
+			}
+			.search-container {
+				flex-direction: column;
+				gap: 10px;
+
+				input {
+					padding: 15px;
+					font-size: 15px;
+				}
+
+				button {
+					position: static;
+					transform: translateY(0);
+					padding: 15px;
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 520px) {
+	main .todo .container-wrapper {
+		width: 350px;
+	}
+}
+@media (max-width: 400px) {
+	main .todo .container-wrapper {
+		padding: 20px;
+		width: 250px;
+
+		.to-do-app {
+			h2 {
+				font-size: 24px;
+
+				img {
+					width: 35px;
+				}
+			}
+			.search-container {
+				input,
+				button {
+					padding: 10px;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 280px) {
+	main .todo .container-wrapper {
+		padding: 15px;
+		width: 170px;
+
+		.to-do-app {
+			h2 {
+				font-size: 20px;
+
+				img {
+					width: 30px;
+				}
+			}
+
+			.search-container {
+				input,
+				button {
+					padding: 7px;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

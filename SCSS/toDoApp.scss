@@ -1,0 +1,193 @@
+@import "variables";
+@import "responsive";
+
+.solo-app {
+	height: 100dvh;
+}
+.main-content {
+	border: 1px solid $strokeColor;
+	padding: 2%;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	box-shadow: 3px 3px 0 $strokeColor;
+	margin-bottom: 50px;
+
+	h2 {
+		color: $whiteColor;
+		border-bottom: 1px solid $hoverColor;
+		width: max-content;
+	}
+
+	p {
+		color: $textColor;
+	}
+}
+.todo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 1rem;
+
+	.container-wrapper {
+		background-color: $backgroundColor;
+		padding: 50px;
+		border-radius: 22px;
+		box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.39);
+		width: 800px;
+		max-width: 100%;
+		max-height: 80vh;
+		overflow: hidden;
+		overflow-y: scroll;
+
+		&::-webkit-scrollbar {
+			width: 0;
+			background: transparent;
+		}
+
+		.to-do-app {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			h2 {
+				display: flex;
+				align-items: center;
+				color: $whiteColor;
+				font-size: 40px;
+				margin-bottom: 25px;
+
+				img {
+					width: 55px;
+					height: auto;
+					margin-left: 25px;
+				}
+			}
+			.search-container {
+				width: 100%;
+				display: flex;
+				position: relative;
+				margin-bottom: 50px;
+				position: sticky;
+				top: 0;
+				left: 0;
+				z-index: 9;
+
+				input {
+					position: relative;
+					flex: 1;
+					padding: 20px;
+					border: 1px solid $strokeColor;
+					background-color: rgb(39, 39, 39);
+					outline: none;
+					border-radius: 20px;
+					font-size: 16px;
+					color: $textColor;
+					font-weight: 500;
+					transition: all 300ms ease;
+
+					&:focus,
+					&:hover {
+						background-color: #131313;
+						border-color: $hoverColor;
+					}
+
+					&:focus {
+						box-shadow: 0 0 20px rgba(109, 109, 109, 0.35);
+					}
+
+					&::placeholder {
+						color: $strokeColor;
+					}
+				}
+
+				button {
+					cursor: pointer;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					height: 100%;
+					padding: 0 60px;
+					border-radius: 20px;
+					background-color: $hoverColor;
+					border: none;
+					outline: none;
+					font-size: 16px;
+					font-weight: 700;
+					color: $whiteColor;
+					transition: 300ms ease;
+
+					&:hover {
+						background-color: #3122ff;
+					}
+				}
+			}
+
+			ul {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+
+				li {
+					background-color: rgb(20, 20, 20);
+					border-bottom: 1px solid $hoverColor;
+					display: flex;
+					border-radius: 100px;
+					align-items: center;
+					user-select: none;
+					cursor: pointer;
+					padding: 12px 50px 12px 50px;
+					font-size: 17px;
+					font-weight: 500;
+					color: #b6b6b6;
+					position: relative;
+					word-break: break-all;
+
+					&:before {
+						content: "";
+						position: absolute;
+						width: 28px;
+						height: 28px;
+						background-image: url(../images/Unchecked.png);
+						background-size: cover;
+						background-position: center;
+						border-radius: 50%;
+						top: 50%;
+						transform: translateY(-50%);
+						left: 12px;
+					}
+
+					&.checked {
+						text-decoration: line-through;
+						color: $strokeColor;
+						border-bottom-color: transparent;
+
+						&::before {
+							background-image: url(../images/Checked.png);
+						}
+					}
+
+					span {
+						position: absolute;
+						right: 12px;
+						width: 40px;
+						height: 40px;
+						font-size: 22px;
+						color: $strokeColor;
+						line-height: 40px;
+						text-align: center;
+						border-radius: 50%;
+						transition: 100ms ease;
+
+						&:hover {
+							background-color: rgb(26, 26, 26);
+							color: $textColor;
+						}
+					}
+				}
+			}
+		}
+	}
+}
