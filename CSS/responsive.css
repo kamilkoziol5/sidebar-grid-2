@@ -17,7 +17,7 @@
     border-radius: 0;
     margin: 0;
     overflow: hidden;
-    border-bottom: 1px solid #636363;
+    border-bottom: 1px solid #707070;
     box-shadow: 0 10px 10px rgba(39, 39, 39, 0.4);
     position: fixed;
     z-index: 9999;
@@ -87,6 +87,13 @@
     padding: 15px;
     font-size: 15px;
   }
+  main .todo .container-wrapper .to-do-app ul li {
+    font-size: 13px;
+  }
+  main .todo .container-wrapper .to-do-app ul li:before {
+    width: 18px;
+    height: 18px;
+  }
 }
 @media (max-width: 520px) {
   main .todo .container-wrapper {
@@ -96,7 +103,7 @@
 @media (max-width: 400px) {
   main .todo .container-wrapper {
     padding: 20px;
-    width: 250px;
+    width: 300px;
   }
   main .todo .container-wrapper .to-do-app h2 {
     font-size: 24px;
@@ -109,11 +116,17 @@
     padding: 10px;
     font-size: 14px;
   }
+  main .todo .container-wrapper .to-do-app .search-container input::-moz-placeholder {
+    font-size: 12px;
+  }
+  main .todo .container-wrapper .to-do-app .search-container input::placeholder {
+    font-size: 12px;
+  }
 }
-@media (max-width: 280px) {
+@media (max-width: 330px) {
   main .todo .container-wrapper {
     padding: 15px;
-    width: 170px;
+    width: 220px;
   }
   main .todo .container-wrapper .to-do-app h2 {
     font-size: 20px;

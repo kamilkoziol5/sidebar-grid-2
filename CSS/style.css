@@ -17,7 +17,7 @@
     border-radius: 0;
     margin: 0;
     overflow: hidden;
-    border-bottom: 1px solid #636363;
+    border-bottom: 1px solid #707070;
     box-shadow: 0 10px 10px rgba(39, 39, 39, 0.4);
     position: fixed;
     z-index: 9999;
@@ -87,6 +87,10 @@
     padding: 15px;
     font-size: 15px;
   }
+  .todo .container-wrapper .to-do-app ul li {
+    font-size: 14px;
+    background-color: red;
+  }
 }
 @media (max-width: 520px) {
   main .todo .container-wrapper {
@@ -146,12 +150,12 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
-  color: #a5a5a5;
+  color: #c9c9c9;
 }
 
 .sidebar {
   background-color: #0f0f0f;
-  border: 1px solid #636363;
+  border: 1px solid #707070;
   box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.9);
   border-radius: 8px;
   width: 76px;
@@ -191,11 +195,14 @@ body {
 .sidebar .logo-container .toogler:hover {
   background-color: #4a3dff;
 }
+.sidebar .logo-container .toogler:hover i {
+  color: #ffffff;
+}
 .sidebar .logo-container .toogler.rotate {
   transform: rotate(180deg);
 }
 .sidebar .logo-container .toogler i {
-  color: #ffffff;
+  color: #c9c9c9;
   font-size: 20px;
 }
 .sidebar .logo-container .close {
@@ -230,7 +237,7 @@ body {
   top: 50%;
   width: 100%;
   height: 2px;
-  background-color: #636363;
+  background-color: #707070;
   transition: 100ms ease;
 }
 .sidebar .menu-items-container .menu-items li a {
@@ -254,7 +261,7 @@ body {
   left: 80px;
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #636363;
+  border: 1px solid #707070;
   background-color: #e6e6e6;
   color: #333;
   font-weight: 500;
@@ -316,12 +323,12 @@ main.solo-app {
   height: 100dvh;
 }
 main .main-content {
-  border: 1px solid #636363;
+  border: 1px solid #707070;
   padding: 2%;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  box-shadow: 3px 3px 0 #636363;
+  box-shadow: 3px 3px 0 #707070;
   margin-bottom: 50px;
 }
 main .main-content h2 {
@@ -331,5 +338,5 @@ main .main-content h2 {
   width: max-content;
 }
 main .main-content p {
-  color: #a5a5a5;
+  color: #c9c9c9;
 }/*# sourceMappingURL=style.css.map */

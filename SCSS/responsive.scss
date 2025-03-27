@@ -102,6 +102,15 @@
 					font-size: 15px;
 				}
 			}
+
+			ul li {
+				font-size: 13px;
+
+				&:before {
+					width: 18px;
+					height: 18px;
+				}
+			}
 		}
 	}
 }
@@ -114,7 +123,7 @@
 @media (max-width: 400px) {
 	main .todo .container-wrapper {
 		padding: 20px;
-		width: 250px;
+		width: 300px;
 
 		.to-do-app {
 			h2 {
@@ -130,14 +139,18 @@
 					padding: 10px;
 					font-size: 14px;
 				}
+
+				input::placeholder {
+					font-size: 12px;
+				}
 			}
 		}
 	}
 }
-@media (max-width: 280px) {
+@media (max-width: 330px) {
 	main .todo .container-wrapper {
 		padding: 15px;
-		width: 170px;
+		width: 220px;
 
 		.to-do-app {
 			h2 {

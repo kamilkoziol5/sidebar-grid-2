@@ -4,6 +4,7 @@
 .solo-app {
 	height: 100dvh;
 }
+
 .main-content {
 	border: 1px solid $strokeColor;
 	padding: 2%;
@@ -23,6 +24,7 @@
 		color: $textColor;
 	}
 }
+// To do App Styles
 .todo {
 	display: flex;
 	justify-content: center;
@@ -33,7 +35,7 @@
 		background-color: $backgroundColor;
 		padding: 50px;
 		border-radius: 22px;
-		box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.39);
+		box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.8);
 		width: 800px;
 		max-width: 100%;
 		max-height: 80vh;
