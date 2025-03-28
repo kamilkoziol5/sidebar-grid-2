@@ -1,10 +1,13 @@
 @media (max-width: 900px) {
   body {
     grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    max-height: 100dvh;
   }
   main {
     padding: 8% 4%;
     gap: 40px;
+    place-content: center;
   }
   main .main-content:first-child {
     margin-top: 100px;
@@ -19,7 +22,7 @@
     overflow: hidden;
     border-bottom: 1px solid #707070;
     box-shadow: 0 10px 10px rgba(39, 39, 39, 0.4);
-    position: fixed;
+    position: sticky;
     z-index: 9999;
   }
   .sidebar .logo-container {

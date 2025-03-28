@@ -218,9 +218,6 @@ main {
 	display: grid;
 	place-content: center;
 
-	&.solo-app {
-		height: 100dvh;
-	}
 	.main-content {
 		border: 1px solid $strokeColor;
 		padding: 2%;
