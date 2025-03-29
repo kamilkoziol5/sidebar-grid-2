@@ -283,6 +283,7 @@
   position: relative;
   word-break: break-all;
   transition: 100ms ease;
+  word-break: break-word;
 }
 .todo .container-wrapper .to-do-app ul li:before {
   content: "";
@@ -305,6 +306,9 @@
 }
 .todo .container-wrapper .to-do-app ul li.checked::before {
   background-image: url(../images/Checked.png);
+}
+.todo .container-wrapper .to-do-app ul li:hover {
+  background-color: #080808;
 }
 .todo .container-wrapper .to-do-app ul li span {
   position: absolute;

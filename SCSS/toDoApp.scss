@@ -32,7 +32,7 @@
 	margin: 0 1rem;
 
 	.container-wrapper {
-		background-color: $backgroundColor;
+		background-color: #0f0f0f;
 		padding: 50px;
 		border-radius: 22px;
 		box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.8);
@@ -147,6 +147,7 @@
 					position: relative;
 					word-break: break-all;
 					transition: 100ms ease;
+					word-break: break-word;
 
 					&:before {
 						content: "";
@@ -171,6 +172,10 @@
 						&::before {
 							background-image: url(../images/Checked.png);
 						}
+					}
+
+					&:hover {
+						background-color: $grayDarkColor;
 					}
 
 					span {
